@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+# Apt
+sudo apt-get update
+
 # Bundler
 cd /vagrant/provisioners/puppet/
 
