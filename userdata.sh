@@ -35,9 +35,6 @@ update-alternatives --set gem /usr/bin/gem2.1
 # Install bundler
 sudo gem install bundler --version=1.9.9
 
-# Install librarian-puppet
-sudo gem install librarian-puppet --version=2.1.0
-
 # Hiera
 sudo gem install deep_merge --version=1.0.1
 sudo gem install msgpack --version=0.5.12
@@ -55,7 +52,9 @@ ln -s /etc/puppet/hiera.yaml /etc/hiera.yaml
 
 # Modules
 cd /etc/puppet/environments/production/
-librarian-puppet install
+
+bundle install --deployment
+bundle exec librarian-puppet install
 
 # Clean
 rm puppetlabs-release-trusty.deb
