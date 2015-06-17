@@ -55,3 +55,6 @@ bundle exec librarian-puppet install
 
 # Configure locales
 dpkg-reconfigure locales
+
+# Guide
+echo "Add private.yaml and run sudo puppet apply /etc/puppet/manifests/default.pp"
