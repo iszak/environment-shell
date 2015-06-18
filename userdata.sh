@@ -51,7 +51,9 @@ git clone --depth=1 https://github.com/iszak/environment-puppet.git /etc/puppet/
 cd /etc/puppet/
 
 bundle install --deployment
-bundle exec librarian-puppet install
+
+# Ensure latest versions
+bundle exec librarian-puppet update
 
 # Configure locales
 dpkg-reconfigure locales
