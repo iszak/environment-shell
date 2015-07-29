@@ -34,7 +34,7 @@ update-alternatives --set ruby /usr/bin/ruby2.1
 update-alternatives --set gem /usr/bin/gem2.1
 
 # Install bundler
-sudo gem install bundler --version=1.10.4
+sudo gem install bundler --version=1.10.6
 
 # Hiera
 sudo gem install deep_merge --version=1.0.1
