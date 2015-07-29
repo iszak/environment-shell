@@ -8,6 +8,9 @@ sudo apt-get autoremove --yes
 # Add support for PPA
 sudo apt-get install software-properties-common --yes
 
+# Add support for ruby gems (e.g. json)
+sudo apt-get install build-essential --yes
+
 # Add support for Git
 sudo apt-get install git --yes
 
