@@ -43,16 +43,23 @@ sudo gem install deep_merge --version=1.0.1
 sudo rm -rf /etc/puppet/
 sudo rm -rf /var/lib/hiera
 sudo rm -f /etc/hiera.yaml
+sudo rm -rf /etc/facter
 
-# Deploy
+# Facter
+mkdir -p /etc/facter/facts.d/
+touch /etc/facter/facts.d/role.txt
+
+# Puppet
+
+## Deploy
 git clone --depth=1 https://github.com/iszak/environment-puppet.git /etc/puppet/
 
-# Modules
+## Modules
 cd /etc/puppet/
 
 bundle install --deployment
 
-# Ensure latest versions
+## Ensure latest versions
 bundle exec librarian-puppet update
 
 # Configure locales
