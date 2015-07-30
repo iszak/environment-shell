@@ -42,6 +42,9 @@ sudo gem install bundler --version=1.10.6
 # Hiera
 sudo gem install deep_merge --version=1.0.1
 
+# Manage user password
+sudo gem install ruby-shadow --version=2.4.1
+
 # Prepare
 sudo rm -rf /etc/puppet/
 sudo rm -rf /var/lib/hiera
