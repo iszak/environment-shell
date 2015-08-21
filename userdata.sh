@@ -4,6 +4,11 @@ sudo apt-get update --yes
 sudo apt-get dist-upgrade --yes
 sudo apt-get autoclean --yes
 sudo apt-get autoremove --yes
+sudo apt-get install tzdata --yes
+
+# Timezone
+echo 'Etc/UTC' > /etc/timezone
+dpkg-reconfigure --frontend noninteractive tzdata
 
 # Add support for PPA
 sudo apt-get install software-properties-common --yes
