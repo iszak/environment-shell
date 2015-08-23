@@ -1,4 +1,5 @@
 ```
+#!/usr/bin/env sh
 USERDATA_PATH="/tmp/userdata.sh"
 USERDATA_LOG="/var/log/userdata.log"
 
