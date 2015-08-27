@@ -78,3 +78,8 @@ dpkg-reconfigure locales
 
 # Guide
 echo "Add private.yaml and run sudo puppet apply /etc/puppet/manifests/default.pp"
+
+# Reboot if required
+if [ -f /var/run/reboot-required ]; then
+  reboot
+fi
