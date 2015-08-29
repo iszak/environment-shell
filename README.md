@@ -1,19 +1,24 @@
 ```
 #!/usr/bin/env sh
-USERDATA_PATH="/tmp/userdata.sh"
-USERDATA_LOG="/var/log/userdata.log"
+TMP_DIR=$(mktemp -d)
+LOG_PATH="/var/log/userdata.log"
+
+# Create directory
+mkdir -p "$TMP_DIR"
+
+sudo apt-get install unzip --yes
 
 # Download
-wget --output-document="$USERDATA_PATH" https://raw.githubusercontent.com/iszak/environment-shell/master/userdata.sh
+wget --output-document="$TMP_DIR/master.zip" https://github.com/iszak/environment-shell/archive/master.zip
 
-# Permission
-chmod +x "$USERDATA_PATH"
+# Extract
+unzip master.zip -d "$TMP_DIR"
 
 # Run
-"$USERDATA_PATH" > "$USERDATA_LOG"
+"$TMP_DIR/userdata.sh" > "$LOG_PATH"
 
 # Clean
-rm "$USERDATA_PATH"
+rm -r "$TMP_DIR"
 
 # Guide
 echo "Add private.yaml and run sudo puppet apply /etc/puppet/manifests/default.pp"
