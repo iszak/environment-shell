@@ -14,4 +14,7 @@ chmod +x "$USERDATA_PATH"
 
 # Clean
 rm "$USERDATA_PATH"
+
+# Guide
+echo "Add private.yaml and run sudo puppet apply /etc/puppet/manifests/default.pp"
 ```
