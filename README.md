@@ -3,6 +3,9 @@
 TMP_DIR=$(mktemp -d)
 LOG_PATH="/var/log/userdata.log"
 
+# Create log
+touch "$LOG_PATH"
+
 # Create directory
 mkdir -p "$TMP_DIR"
 
@@ -16,7 +19,9 @@ tar --extract --gzip --file "$TMP_DIR/master.tar.gz" --directory "$TMP_DIR"
 cd "$TMP_DIR/environment-shell-master/"
 
 # Run
-./upgrade.sh ./timezone.sh ./locale.sh > "$LOG_PATH"
+./upgrade.sh >> "$LOG_PATH"
+./timezone.sh >> "$LOG_PATH"
+./locale.sh >> "$LOG_PATH"
 
 # Clean
 rm -r "$TMP_DIR"
