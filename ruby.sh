@@ -15,4 +15,4 @@ update-alternatives --set ruby /usr/bin/ruby2.1
 update-alternatives --set gem /usr/bin/gem2.1
 
 # Bundler
-sudo gem install bundler --version=1.10.6
+sudo gem install bundler
