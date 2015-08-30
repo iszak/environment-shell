@@ -23,7 +23,6 @@ hostname 'foreman.iszak.net'
 
 # Install foreman
 foreman-installer --enable-foreman-plugin-digitalocean \
-                  --enable-foreman-plugin-docker \
 \
                   --foreman-admin-email="iszak.bryan@gmail.com" \
                   --foreman-admin-first-name="Iszak" \
