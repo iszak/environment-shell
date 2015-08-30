@@ -6,16 +6,14 @@ LOG_PATH="/var/log/userdata.log"
 # Create directory
 mkdir -p "$TMP_DIR"
 
-sudo apt-get install unzip --yes
-
 # Download
-wget --output-document="$TMP_DIR/master.zip" https://github.com/iszak/environment-shell/archive/master.zip
+wget --directory-prefix="$TMP_DIR" https://github.com/iszak/environment-shell/archive/master.tar.gz
 
 # Extract
-unzip master.zip -d "$TMP_DIR"
+tar --extract --gzip --file "$TMP_DIR/master.tar.gz" --directory "$TMP_DIR"
 
 # Run
-"$TMP_DIR/userdata.sh" > "$LOG_PATH"
+"$TMP_DIR/environment-shell-master/userdata.sh" > "$LOG_PATH"
 
 # Clean
 rm -r "$TMP_DIR"
