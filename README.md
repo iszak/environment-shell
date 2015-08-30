@@ -12,8 +12,11 @@ wget --directory-prefix="$TMP_DIR" https://github.com/iszak/environment-shell/ar
 # Extract
 tar --extract --gzip --file "$TMP_DIR/master.tar.gz" --directory "$TMP_DIR"
 
+# CWD
+cd "$TMP_DIR/environment-shell-master/"
+
 # Run
-"$TMP_DIR/environment-shell-master/userdata.sh" > "$LOG_PATH"
+./upgrade.sh ./timezone.sh ./locale.sh > "$LOG_PATH"
 
 # Clean
 rm -r "$TMP_DIR"
