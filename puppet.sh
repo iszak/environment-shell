@@ -11,6 +11,9 @@ sudo apt-get update
 # Puppet
 sudo apt-get install puppet --yes
 
+# Build tools
+apt-get install build-essential --yes
+
 # Puppet / Hiera dependencies
 sudo gem install ruby-shadow --version=2.4.1
 sudo gem install deep_merge --version=1.0.1
