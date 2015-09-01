@@ -3,6 +3,10 @@
 TMP_DIR=$(mktemp -d)
 LOG_PATH="/var/log/userdata.log"
 
+REPO_HOST="github.com"
+REPO_USER="iszak"
+REPO_NAME="environment-shell"
+
 # Create log
 touch "$LOG_PATH"
 
@@ -10,13 +14,13 @@ touch "$LOG_PATH"
 mkdir -p "$TMP_DIR"
 
 # Download
-wget --directory-prefix="$TMP_DIR" https://github.com/iszak/environment-shell/archive/master.tar.gz
+wget --directory-prefix="$TMP_DIR" "https://$REPO_HOST/$REPO_USER/$REPO_NAME/archive/master.tar.gz"
 
 # Extract
 tar --extract --gzip --file "$TMP_DIR/master.tar.gz" --directory "$TMP_DIR"
 
 # CWD
-cd "$TMP_DIR/environment-shell-master/"
+cd "$TMP_DIR/$REPO_NAME-master/"
 
 # Run
 ./upgrade.sh >> "$LOG_PATH"
