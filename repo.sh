@@ -1,6 +1,12 @@
 #!/usr/bin/env sh
 set -e
 
+REPO_URL="https://github.com/iszak/environment-puppet.git"
+REPO_PATH="/etc/puppet"
+
+# Prepare
+rm -rf "$REPO_PATH"
+
 # Git
 sudo apt-get install git --yes
 
@@ -11,7 +17,7 @@ sudo gem install bundler
 sudo gem install librarian-puppet
 
 ## Deploy
-git clone --depth=1 https://github.com/iszak/environment-puppet.git /etc/puppet/
+git clone --depth=1 "$REPO_URL" "$REPO_PATH"
 
 ## Modules
 cd /etc/puppet/
