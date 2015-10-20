@@ -9,6 +9,6 @@ set -e
 ./ruby.sh
 ./puppet.sh
 
-./repo.sh
+./puppetmaster.sh
 
 ./reboot.sh
