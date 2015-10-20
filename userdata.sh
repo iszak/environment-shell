@@ -8,6 +8,8 @@ set -e
 
 ./ruby.sh
 ./puppet.sh
+./hiera.sh
+./facter.sh
 
 ./puppetmaster.sh
 
