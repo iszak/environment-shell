@@ -6,6 +6,7 @@ sudo apt-get install software-properties-common --yes
 
 # PPA
 sudo apt-add-repository ppa:brightbox/ruby-ng --yes
+sudo apt-get update
 
 # Ruby 2.1
 sudo apt-get install ruby2.1 ruby2.1-dev --yes
