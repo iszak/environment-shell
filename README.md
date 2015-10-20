@@ -5,7 +5,7 @@ LOG_PATH="/var/log/userdata.log"
 
 REPO_HOST="github.com"
 REPO_USER="iszak"
-REPO_NAME="environment-shell"
+REPO_NAME="shell"
 
 # Create log
 touch "$LOG_PATH"
