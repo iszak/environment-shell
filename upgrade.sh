@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 
 sudo apt-get update --yes
 sudo apt-get dist-upgrade --yes
