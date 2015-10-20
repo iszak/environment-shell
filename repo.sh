@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -e
 
-REPO_URL="https://github.com/iszak/environment-puppet.git"
+REPO_URL="https://github.com/iszak/puppet.git"
 REPO_PATH="/etc/puppet"
 
 # Prepare
