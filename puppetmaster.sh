@@ -11,10 +11,7 @@ rm -rf "$REPO_PATH"
 sudo apt-get install git --yes
 
 # Bundler
-sudo gem install bundler
-
-# Librarian-puppet
-sudo gem install librarian-puppet
+sudo apt-get install bundler
 
 ## Deploy
 git clone --depth=1 "$REPO_URL" "$REPO_PATH"
