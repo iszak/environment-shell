@@ -8,8 +8,8 @@ sudo apt-get install puppet --yes
 apt-get install build-essential --yes
 
 # Puppet dependencies
-sudo gem install ruby-shadow
-sudo gem install deep_merge
+sudo apt-get install ruby-deep-merge --yes
+sudo apt-get install ruby-shadow --yes
 
 # Clean
 sudo rm -rf /etc/puppet/
