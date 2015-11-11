@@ -1,6 +1,10 @@
 #!/usr/bin/env sh
 set -e
 
+./puppet.sh
+./hiera.sh
+./facter.sh
+
 sudo apt-get install puppetmaster
 
 REPO_URL="https://github.com/iszak/puppet.git"
