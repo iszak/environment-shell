@@ -10,4 +10,4 @@ before_install:
   - sudo apt-get install -y shellcheck
 
 script:
-  - shellcheck .
+  - find . -iname "*.sh" -exec shellcheck {} \;
