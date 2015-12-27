@@ -1,3 +1,10 @@
+Shell
+====
+
+This is a collection of shell scripts usually used to bootstrap a base image via packer
+
+[![Build Status](https://travis-ci.org/iszak/shell.svg)](https://travis-ci.org/iszak/shell)
+
 ```
 #!/usr/bin/env sh
 TMP_DIR=$(mktemp -d)
