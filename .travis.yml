@@ -1,10 +1,12 @@
 ---
 language: bash
-dist: trusty
+
 sudo: required
+dist: trusty
 
 before_install:
-  - sudo apt-get update -qq
+  - echo "deb http://archive.ubuntu.com/ubuntu/ wily universe" | sudo tee -a /etc/apt/sources.list
+  - sudo apt-get update -q
   - sudo apt-get install -y shellcheck
 
 script:
